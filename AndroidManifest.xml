@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paoma_zf"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+
+    <application
+        android:name="com.example.paoma_zf.Application.ZfApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.paoma_zf.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.GuidepageActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.IndexViewPagerActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.HomepageActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.RegistrationActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.AuthenticationActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.LookhomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.InformationActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.ScenicspotsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.SpecialtiesActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.SurroundingActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.FirstActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.CalendarActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.HomestyleDialog" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.SortstyleDialog" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.OrderformActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.OrderformlistActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.OrderformInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.HousekeeperActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.HousekeeperintroductionActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.DiscussdetailsActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.MythingActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.MyorderformlistActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.PublicationevluationActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.MessageListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.PhotoDialog"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.AddressDialog" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.BrowserecordActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.CollectListActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.HousecommentActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.FeedbackActivity" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.AboutusActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.DialogimgActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.ImagePagerActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.FindPasswordByPhoneActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.ResetPasswordActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.paoma_zf.activity.MyInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.example.paoma_zf.activity.FindPasswordByEmailActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+    </application>
+
+</manifest>

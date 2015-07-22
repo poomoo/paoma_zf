@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="&quot;dianzan&quot;" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+             android:background="@color/white"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/roundImageView1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/lightblue"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView_lvhousekeeper_disname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:text="王小呆"
+                        android:textColor="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView_lvhousekeeper_distime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:text="2分钟前"
+                            android:textColor="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textView_lvhousekeeper_disId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="43dp"
+                            android:text="TextView"
+                             android:visibility="gone"
+                             />
+
+                        <TextView
+                            android:id="@+id/textView_lvhousekeeper_disNameId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/textView1"
+                            android:visibility="gone"
+                            android:text="TextView" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView_lvhousekeeper_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView_lvhousekeeper_distype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                             android:layout_marginLeft="5dp"
+                        android:text="管家"
+                        android:textColor="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/imageView_lvhousekeeper_disdianzan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:src="@drawable/ic_1280_dianzan"
+                        android:tag="dianzan" />
+
+                    <TextView
+                        android:id="@+id/textView_lvhousekeeper_disdianzancount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="TextView"
+                        android:textColor="@color/gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView_lvhousekeeper_dishuifucount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/imageView_lvhousekeeper_dishuifu"
+                            android:text="回复"
+                            android:textColor="@color/gray" />
+
+                        <ImageView
+                            android:id="@+id/imageView_lvhousekeeper_dishuifu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_1280_huifu"
+                            android:tag="huifu" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.example.paoma_zf.view.RoundImageView
+                android:id="@+id/roundImageView_lvhousekeeper_dispic"
+                android:layout_width="52dp"
+                android:layout_height="70dp"
+                android:layout_alignLeft="@+id/linearLayout1"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/pic_jd3" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

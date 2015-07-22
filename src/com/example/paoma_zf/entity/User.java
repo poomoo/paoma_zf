@@ -1,0 +1,15 @@
+package com.example.paoma_zf.entity;
+
+public class User {
+	
+	private String username;
+	private String userpassword;
+	
+	public String getUserpassword() {
+		return userpassword;
+	}
+	public void setUserpassword(String userpassword) {
+		this.userpassword = userpassword;
+	}
+
+}

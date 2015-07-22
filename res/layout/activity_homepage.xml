@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightblue"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="230dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/pic_homepage_top" >
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:background="@drawable/pic_homepage_content" >
+
+            <ImageView
+                android:id="@+id/imageView_homepage_shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_homepage_shopping" />
+
+            <ImageView
+                android:id="@+id/imageView_homepage_help"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_homepage_help" />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_homepage_lookhome"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/RelativeLayout_homepage_housekeeper"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="96dp" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_homepage_housekeeper"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_above="@+id/imageView_homepage_help"
+                android:layout_marginRight="38dp"
+                android:layout_toLeftOf="@+id/imageView_homepage_shopping" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_homepage_login"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:layout_alignTop="@+id/RelativeLayout_homepage_lookhome"
+                android:layout_marginRight="25dp"
+                android:layout_toLeftOf="@+id/RelativeLayout_homepage_lookhome" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

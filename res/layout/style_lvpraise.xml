@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/roundImageView1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+        
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView_lvpraise_disname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="王小呆"
+                            android:textColor="@color/gray" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="4dp"
+                        android:layout_height="20dp" 
+                         android:textColor="@color/black"
+                         android:layout_marginLeft="8dp"
+                         android:layout_marginRight="8dp"
+                        >
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/textView_lvpraise_distype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="26dp"
+                            android:text="管家"
+                            android:textColor="@color/gray" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="12dp" >
+
+                    <TextView
+                        android:id="@+id/textView_lvpraise_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textSize="15dp" 
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                
+            </LinearLayout>
+
+            <com.example.paoma_zf.view.RoundImageView
+                android:id="@+id/roundImageView_lvpraise_dispic"
+                android:layout_width="52dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/linearLayout1"
+                android:src="@drawable/pic_jd3" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+</LinearLayout>

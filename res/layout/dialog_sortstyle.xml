@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_delault"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="默认排序"
+            android:textSize="15dp" 
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+           android:layout_marginTop="15dp"
+         >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_moneyup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="价格最高"
+            android:textSize="15dp" 
+             android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+           android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_moneydown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="价格最低"
+            android:textSize="15dp" 
+             android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+           android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_scoreup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="15dp"
+            android:text="评分最高"
+             android:gravity="center"
+             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+           android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_commentup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                        android:textSize="15dp"
+            android:text="评论最多" 
+             android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+           android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_dialogsortstyle_bookup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                        android:textSize="15dp"
+            android:text="预定最多" 
+             android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

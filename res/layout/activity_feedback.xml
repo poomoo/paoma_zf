@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" >
+
+            <fragment
+                android:id="@+id/fragment1"
+                android:name="com.example.paoma_zf.fragment.ReturnFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="#f4f4f4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp" >
+
+                <EditText
+                    android:id="@+id/editText_feedback_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/white"
+                    android:editable="false"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="您的意见是对我们最大的支持其."
+                    android:inputType="textMultiLine"
+                    android:maxHeight="90dp"
+                    android:maxLength="200" >
+
+                    <requestFocus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView_feedback_cannum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="11dp"
+                    android:text="还能输入100字"
+                    android:textColor="@color/lightgray" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的联系方式" />
+
+                <com.example.paoma_zf.view.ClearEditText
+                    android:id="@+id/ClearEditText_feedback_lxfs"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/login_edittext_bg"
+                    android:drawableRight="@drawable/delete_selector"
+                    android:hint="QQ/微信/手机号" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:paddingBottom="20dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" >
+
+            <Button
+                android:id="@+id/button_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/lightblue"
+                android:text="提交意见" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
