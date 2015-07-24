@@ -68,8 +68,9 @@ public class MythingActivity extends Activity {
 		textView_mything_uesrname = (TextView) findViewById(R.id.textView_mything_uesrname);
 		textView_mything_uesrtype = (TextView) findViewById(R.id.textView_mything_uesrtype);
 		textView_mything_userscores = (TextView) findViewById(R.id.textView_mything_userscores);
-		textView_mything_uesrname.setOnClickListener(new mythingclicklisten());
-		textView_mything_uesrname.setTag("userInfo");
+		// textView_mything_uesrname.setOnClickListener(new
+		// mythingclicklisten());
+		// textView_mything_uesrname.setTag("userInfo");
 
 		textView_mything_login_relogin = (TextView) findViewById(R.id.textView_mything_login_relogin);
 
@@ -163,8 +164,12 @@ public class MythingActivity extends Activity {
 			if (v.getTag().equals("photo")) {
 				if (checklogin()) {
 					Intent i = new Intent();
-					i.setClass(getApplicationContext(), PhotoDialog.class);
+					i.setClass(MythingActivity.this, MyInfoActivity.class);
 					startActivityForResult(i, 101);
+
+					// Intent i = new Intent();
+					// i.setClass(getApplicationContext(), PhotoDialog.class);
+					// startActivityForResult(i, 101);
 				}
 			}
 			if (v.getTag().equals("login")) {
@@ -254,32 +259,33 @@ public class MythingActivity extends Activity {
 				startActivity(i);
 			}
 
-			if (v.getTag().equals("userInfo")) {
-				if (!Zfapp.getUserName().toString().trim().equals("")) {
-					Intent i = new Intent();
-					i.setClass(MythingActivity.this, MyInfoActivity.class);
-					i.putExtra("name", Zfapp.getUserName());
-					i.putExtra("phone", Zfapp.getTel());
-					i.putExtra("mail", Zfapp.getEmail());
-					startActivity(i);
-				} else {
-					AlertDialog.Builder builder = new Builder(
-							MythingActivity.this);
-					builder.setMessage("请先登录");
-					builder.setTitle("提示");
-					builder.setPositiveButton("确认",
-							new Dialog.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
-									dialog.dismiss();
-								}
-							});
-					builder.create().show();
-				}
-
-			}
+			// if (v.getTag().equals("userInfo")) {
+			// if (!Zfapp.getUserName().toString().trim().equals("")) {
+			// Intent i = new Intent();
+			// i.setClass(MythingActivity.this, MyInfoActivity.class);
+			// i.putExtra("id", Zfapp.getUserId());
+			// i.putExtra("name", Zfapp.getUserName());
+			// i.putExtra("mail", Zfapp.getEmail());
+			// // i.putExtra("address", Zfapp.get);
+			// startActivity(i);
+			// } else {
+			// AlertDialog.Builder builder = new Builder(
+			// MythingActivity.this);
+			// builder.setMessage("请先登录");
+			// builder.setTitle("提示");
+			// builder.setPositiveButton("确认",
+			// new Dialog.OnClickListener() {
+			// @Override
+			// public void onClick(DialogInterface dialog,
+			// int which) {
+			// // TODO Auto-generated method stub
+			// dialog.dismiss();
+			// }
+			// });
+			// builder.create().show();
+			// }
+			//
+			// }
 		}
 	}
 
@@ -312,6 +318,7 @@ public class MythingActivity extends Activity {
 			if (data.getBooleanExtra("isTrue", false)) {
 				Zfapp = (ZfApplication) getApplication();
 				imageView_mything_uesr.setImageBitmap(Zfapp.getBm());
+				textView_mything_uesrname.setText(Zfapp.getUserName());
 			}
 		}
 		super.onActivityResult(requestCode, resultCode, data);

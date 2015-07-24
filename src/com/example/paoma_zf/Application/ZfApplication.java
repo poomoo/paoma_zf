@@ -28,6 +28,7 @@ public class ZfApplication extends Application {
 	private String levelName;
 	private String tel;
 	private String email;
+	private String address;
 
 	public String getUserId() {
 		return userId;
@@ -102,6 +103,14 @@ public class ZfApplication extends Application {
 
 	public void setBm(Bitmap bm) {
 		this.bm = bm;
+	}
+
+	public String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@SuppressLint("NewApi")

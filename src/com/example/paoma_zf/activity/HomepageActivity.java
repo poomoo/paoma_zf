@@ -59,19 +59,23 @@ public class HomepageActivity extends BaseActivity {
 					i.setClass(HomepageActivity.this, LoginActivity.class);
 					startActivity(i);
 				} else {
-					AlertDialog.Builder builder = new Builder(
-							HomepageActivity.this);
-					builder.setMessage("已登录");
-					builder.setTitle("提示");
-					builder.setPositiveButton("确认",
-							new Dialog.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									dialog.dismiss();
-								}
-							});
-					builder.create().show();
+					
+					Intent intent = new Intent();
+					intent.setClass(HomepageActivity.this, LookhomeActivity.class);
+					startActivity(intent);
+					// AlertDialog.Builder builder = new Builder(
+					// HomepageActivity.this);
+					// builder.setMessage("已登录");
+					// builder.setTitle("提示");
+					// builder.setPositiveButton("确认",
+					// new Dialog.OnClickListener() {
+					// @Override
+					// public void onClick(DialogInterface dialog,
+					// int which) {
+					// dialog.dismiss();
+					// }
+					// });
+					// builder.create().show();
 				}
 			}
 		});

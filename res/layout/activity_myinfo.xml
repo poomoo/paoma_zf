@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_alterUserInfo_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#efefefef"
+    android:background="@drawable/bg_homesky"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -17,120 +18,135 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_myinfo_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp" >
+        android:orientation="vertical" >
+
+        <com.example.paoma_zf.view.RoundImageView
+            android:id="@+id/imageView_myinfo_headpic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="昵称"
-            android:textStyle="bold" />
+            android:layout_height="10dp" />
 
-        <TextView
-            android:id="@+id/textView_myinfo_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:gravity="left"
-            android:text="lflflf"
-            android:textColor="#666666" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_filletview"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_1280_jiantou" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="昵称"
+                android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gainsboro" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_myinfo_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp" >
+            <EditText
+                android:id="@+id/editText_myinfo_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@null"
+                android:gravity="left"
+                android:text="lflflf"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="手机"
-            android:textStyle="bold" />
+            android:layout_height="10dp" />
 
-        <TextView
-            android:id="@+id/textView_myinfo_phone"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:gravity="left"
-            android:text="13333333333"
-            android:textColor="#666666" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_filletview"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_1280_jiantou" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="邮箱"
+                android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gainsboro" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_myinfo_mail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="5dp" >
+            <EditText
+                android:id="@+id/editText_myinfo_mail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@null"
+                android:gravity="left"
+                android:text="pm@poomoo.com"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="邮箱"
-            android:textStyle="bold" />
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/style_filletview"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="地址"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_myinfo_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@null"
+                android:gravity="left"
+                android:text="常用地址"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView_myinfo_mail"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:gravity="left"
-            android:text="pm@poomoo.com"
-            android:textColor="#666666" />
+            android:layout_height="10dp" />
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ic_1280_jiantou" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_myinfo_alter"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/style_button_fillet"
+            android:gravity="center" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gainsboro" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即修改"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -54,14 +54,14 @@ import com.example.paoma_zf.view.TimeCountUtil;
 public class RegistrationActivity extends BaseActivity {
 
 	LinearLayout LinearLayout_registration_phone,
-			LinearLayout_registration_mail, linearLayout_spinner;
+			LinearLayout_registration_mail, linearLayout_spinner,LinearLayout_registration_next;
 	EditText editText_registration_phonenum,
 			editText_registartion_numverificationphone,
 			editText_registartion_phonepassword,
 			editText_registartion_phonepassword_again,
 			editText_registartion_licensenum;
 	Button button_registration_verificationphone;
-	TextView textView_registration_next, textView_registration_isUsed;
+	TextView textView_registration_isUsed;
 	Spinner spinner;
 
 	String uesrtype;
@@ -96,7 +96,7 @@ public class RegistrationActivity extends BaseActivity {
 		editText_registartion_phonepassword = (EditText) findViewById(R.id.editText_registartion_phonepassword_new);
 		editText_registartion_phonepassword_again = (EditText) findViewById(R.id.editText_registartion_phonepasswordagain);
 		editText_registartion_licensenum = (EditText) findViewById(R.id.editText_registartion_licensenum);
-		textView_registration_next = (TextView) findViewById(R.id.textView_registartion_next);
+		LinearLayout_registration_next = (LinearLayout) findViewById(R.id.layout_registartion_next);
 		textView_registration_isUsed = (TextView) findViewById(R.id.textView_registration_isUsed);
 		spinner = (Spinner) findViewById(R.id.spinner_registration);
 		button_registration_verificationphone = (Button) findViewById(R.id.button_registration_verificationphone_new);
@@ -134,8 +134,8 @@ public class RegistrationActivity extends BaseActivity {
 					}
 				});
 
-		textView_registration_next.setTag("login");
-		textView_registration_next
+		LinearLayout_registration_next.setTag("login");
+		LinearLayout_registration_next
 				.setOnClickListener(new RegistartionClickListener());
 
 		button_registration_verificationphone.setTag("getphonenum");

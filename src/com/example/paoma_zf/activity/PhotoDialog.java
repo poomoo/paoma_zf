@@ -139,11 +139,11 @@ public class PhotoDialog extends Activity {
 					@Override
 					public void run() {
 						Message message = new Message();
-						if (Zfnet.uploadFile(saveBitmap(photo),
-								ZfConfig.getUserList))
-							message.what = 1;
-						else
-							message.what = 2;
+						// if (Zfnet.uploadFile(saveBitmap(photo),
+						// ZfConfig.getUserList))
+						// message.what = 1;
+						// else
+						// message.what = 2;
 						myHandler.sendMessage(message);
 					}
 				}).start();

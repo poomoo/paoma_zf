@@ -19,6 +19,7 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.FileEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
@@ -36,7 +37,6 @@ import android.util.Log;
 
 import com.example.paoma_zf.R;
 import com.example.paoma_zf.config.ZfConfig;
-import com.loopj.android.http.RequestParams;
 
 public class Zfnet {
 
@@ -540,7 +540,7 @@ public class Zfnet {
 		nameValuePair.add(new BasicNameValuePair("jsonData", jsonObject
 				.toString()));
 		String ss = doPost(nameValuePair, url);
-		System.out.println(ss);
+		System.out.println("userinfo" + ss);
 
 		JSONObject result = new JSONObject(ss.toString());// 转换为JSONObject
 
@@ -556,6 +556,7 @@ public class Zfnet {
 		map.put("tel", rrtt.getString("tel"));
 		map.put("userId", rrtt.getString("userId"));
 		map.put("userName", rrtt.getString("userName"));
+		map.put("address", rrtt.getString("address"));
 
 		Bitmap bm = getBitmap(rrtt.getString("headIcon").toString(), context);
 		map.put("headIcon", bm);
@@ -1509,52 +1510,6 @@ public class Zfnet {
 		return false;
 	}
 
-	/**
-	 * 
-	 * 
-	 * @Title: uploadFile
-	 * @Description: TODO 上传文件
-	 * @author 李苜菲
-	 * @return
-	 * @return boolean
-	 * @throws
-	 * @date 2015-7-20上午10:58:40
-	 */
-	public static boolean uploadFile(File file, String url) {
-		HttpClient httpClient = new DefaultHttpClient();
-
-		HttpPost httpPost = new HttpPost(url);
-		List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
-		JSONObject jsonObject = new JSONObject();
-		RequestParams params = new RequestParams();
-		try {
-			// 放入文件
-			jsonObject.put("userId", "5");
-			jsonObject.put("method", "1011");
-
-			params.put("jsonData", jsonObject.toString());
-			params.put("file", file);
-
-			nameValuePair.add(new BasicNameValuePair("jsonData", jsonObject
-					.toString()));
-			httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
-			HttpResponse httpResponse = httpClient.execute(httpPost);
-
-			// 判断是够请求成功
-			if (httpResponse.getStatusLine().getStatusCode() == 200) {
-				// 获取返回的数据
-				// result = EntityUtils.toString(httpResponse.getEntity(),
-				// "UTF-8");
-				return true;
-			} else {
-				return false;
-			}
-		} catch (Exception e) {
-		}
-		return false;
-	}
-
 	// 获取随机许可号
 	public static String getLicenseNumber(String url) throws Exception {
 		HttpClient httpClient = new DefaultHttpClient();
@@ -1806,5 +1761,60 @@ public class Zfnet {
 		String rscode = jsonObject2.getString("rsCode");
 		String msg = jsonObject2.getString("msg");
 		return rscode + "|" + msg;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @Title: uploadUserInfo
+	 * @Description: TODO 上传修改的用户信息
+	 * @author 李苜菲
+	 * @return
+	 * @return boolean
+	 * @throws
+	 * @date 2015-7-23下午4:02:22
+	 */
+	public static boolean uploadUserInfo(String userId, String userName,
+			String address, String email, File file, String url) {
+		HttpClient httpClient = new DefaultHttpClient();
+		HttpPost httpPost = new HttpPost(url);
+		List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
+
+		JSONObject jsonObject = new JSONObject();
+
+		try {
+			// 放入文件
+			jsonObject.put("userId", userId);
+			jsonObject.put("userName", userName);
+			jsonObject.put("address", address);
+			jsonObject.put("email", email);
+			jsonObject.put("method", "1019");
+			
+  
+			
+			nameValuePair.add(new BasicNameValuePair("jsonData", jsonObject
+					.toString()));
+
+			if (nameValuePair != null) {
+				// 设置字符集
+				HttpEntity entity = new UrlEncodedFormEntity(nameValuePair,
+						HTTP.UTF_8);
+				// 设置参数实体
+				httpPost.setEntity(entity);
+			}
+
+			// 获取HttpResponse实例
+			HttpResponse httpResp = httpClient.execute(httpPost);
+			// 判断是够请求成功
+			if (httpResp.getStatusLine().getStatusCode() == 200) {
+				// 获取返回的数据
+				String result = EntityUtils.toString(httpResp.getEntity(),
+						"UTF-8");
+			}
+
+		} catch (Exception e) {
+			System.out.println("异常" + e.getMessage().toString());
+		}
+		return true;
 	}
 }

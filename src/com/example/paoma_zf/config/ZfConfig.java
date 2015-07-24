@@ -106,8 +106,8 @@ public class ZfConfig {
 	// "http://jiatx.longguanhuamu.com/eimh/appBrowseAction.action";
 
 	// IP
-	// public static final String url = "http://192.168.1.102:8080/eimh/";
-	public static final String url = "http://jiatx.longguanhuamu.com/eimh/";
+	public static final String url = "http://192.168.0.105:8080/eimh/";
+//	 public static final String url = "http://jiatx.longguanhuamu.com/eimh/";
 
 	// µÇÂ¼
 	public static final String getUserList = url + "appUserAction.action";

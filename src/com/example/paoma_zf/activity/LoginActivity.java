@@ -31,6 +31,7 @@ import com.example.paoma_zf.R;
 import com.example.paoma_zf.Application.ZfApplication;
 import com.example.paoma_zf.config.ZfConfig;
 import com.example.paoma_zf.net.Zfnet;
+import com.example.paoma_zf.popupwindow.Login_PopupWindow;
 
 public class LoginActivity extends BaseActivity {
 
@@ -211,6 +212,8 @@ public class LoginActivity extends BaseActivity {
 											.toString());
 									Zfapp.setTel(UserList.get(0).get("tel")
 											.toString());
+									Zfapp.setAddress(UserList.get(0).get(
+											"address").toString());
 								}
 								message.what = 1;
 								myHandler.sendMessage(message);
@@ -252,12 +255,14 @@ public class LoginActivity extends BaseActivity {
 			switch (view.getId()) {
 
 			case R.id.popup_login_byphone:
-				Intent out = new Intent(LoginActivity.this,FindPasswordByPhoneActivity.class);
+				Intent out = new Intent(LoginActivity.this,
+						FindPasswordByPhoneActivity.class);
 				startActivity(out);
 				break;
 
 			case R.id.popup_login_bymail:
-				Intent out1 = new Intent(LoginActivity.this,FindPasswordByEmailActivity.class);
+				Intent out1 = new Intent(LoginActivity.this,
+						FindPasswordByEmailActivity.class);
 				startActivity(out1);
 				break;
 			}
