@@ -53,15 +53,13 @@ public class FindPasswordByPhoneActivity extends BaseActivity {
 		editText_phone.addTextChangedListener(new TextWatcher() {
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
 				// TODO 自动生成的方法存根
 
 			}
 
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 				// TODO 自动生成的方法存根
 
 			}
@@ -100,6 +98,7 @@ public class FindPasswordByPhoneActivity extends BaseActivity {
 			// TODO 自动生成的方法存根
 			switch (v.getId()) {
 			case R.id.button_findpassword_identitynum:
+				System.out.println("获取验证码");
 				getIdentityNum();
 				break;
 			case R.id.layout_findpassword_next:
@@ -140,8 +139,7 @@ public class FindPasswordByPhoneActivity extends BaseActivity {
 		// builder.create().show();
 		// return;
 		// }
-		TimeCountUtil timeCountUtil = new TimeCountUtil(
-				FindPasswordByPhoneActivity.this, 60000, 1000, btn);
+		TimeCountUtil timeCountUtil = new TimeCountUtil(FindPasswordByPhoneActivity.this, 60000, 1000, btn);
 		timeCountUtil.start();
 		new Thread(new Runnable() {
 			@Override
@@ -164,8 +162,7 @@ public class FindPasswordByPhoneActivity extends BaseActivity {
 			public void run() {
 				Message msg = new Message();
 				try {
-					if (Zfnet.checkcode(phoneNum, identityNum,
-							ZfConfig.getUserList))
+					if (Zfnet.checkcode(phoneNum, identityNum, ZfConfig.getUserList))
 						msg.arg1 = 1;
 					else
 						msg.arg1 = 2;
@@ -181,22 +178,18 @@ public class FindPasswordByPhoneActivity extends BaseActivity {
 	Handler myHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			if (msg.what == 1)
-				Toast.makeText(getApplicationContext(), "发送成功",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "发送成功", Toast.LENGTH_LONG).show();
 			if (msg.what == 2)
-				Toast.makeText(getApplicationContext(), "发送失败",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "发送失败", Toast.LENGTH_LONG).show();
 
 			if (msg.what == 3) {
 				xh_pDialog.cancel();
 				if (msg.arg1 != 1) {
-					Toast.makeText(FindPasswordByPhoneActivity.this, "验证码不正确！",
-							Toast.LENGTH_SHORT).show();
+					Toast.makeText(FindPasswordByPhoneActivity.this, "验证码不正确！", Toast.LENGTH_SHORT).show();
 					return;
 				}
 
-				Intent next = new Intent(FindPasswordByPhoneActivity.this,
-						ResetPasswordActivity.class);
+				Intent next = new Intent(FindPasswordByPhoneActivity.this, ResetPasswordActivity.class);
 				next.putExtra("tel", phoneNum);
 				startActivity(next);
 				finish();

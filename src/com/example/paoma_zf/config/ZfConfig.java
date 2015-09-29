@@ -106,8 +106,10 @@ public class ZfConfig {
 	// "http://jiatx.longguanhuamu.com/eimh/appBrowseAction.action";
 
 	// IP
-	public static final String url = "http://192.168.0.105:8080/eimh/";
-//	 public static final String url = "http://jiatx.longguanhuamu.com/eimh/";
+	// public static final String url = "http://192.168.0.105:8080/eimh/";
+	// public static final String url = "http://jiatx.longguanhuamu.com/eimh/";
+
+	public static final String url = "http://jia-tx.91jiaoyou.cn/eimh/";
 
 	// 登录
 	public static final String getUserList = url + "appUserAction.action";
@@ -128,7 +130,6 @@ public class ZfConfig {
 	// 获取浏览记录
 	public static final String getBrowserecord = url + "appBrowseAction.action";
 	// 获取用户等级
-	public static final String getUserLevelList = url
-			+ "appUserLevelAction.action";
+	public static final String getUserLevelList = url + "appUserLevelAction.action";
 
 }

@@ -557,6 +557,7 @@ public class Zfnet {
 		map.put("userId", rrtt.getString("userId"));
 		map.put("userName", rrtt.getString("userName"));
 		map.put("address", rrtt.getString("address"));
+		map.put("type", rrtt.getString("type"));
 
 		Bitmap bm = getBitmap(rrtt.getString("headIcon").toString(), context);
 		map.put("headIcon", bm);
@@ -1481,6 +1482,7 @@ public class Zfnet {
 
 	// 获取验证码
 	public static boolean getIdentitynumber(String phonenumber, String url) {
+		System.out.println("url:"+url);
 		HttpClient httpClient = new DefaultHttpClient();
 
 		HttpPost httpPost = new HttpPost(url);

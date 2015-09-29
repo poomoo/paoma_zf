@@ -200,7 +200,7 @@ public class InformationActivity extends BaseActivity {
 
 		viewFlipper__information_img = (ViewFlipper) findViewById(R.id.viewFlipper__information_img);
 
-		final GestureDetector gd = new GestureDetector(new MyGestureListener(
+		final GestureDetector gd = new GestureDetector(this,new MyGestureListener(
 				this, viewFlipper__information_img));
 
 		viewFlipper__information_img.setInAnimation(AnimationUtils

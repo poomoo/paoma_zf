@@ -3,7 +3,6 @@ package com.example.paoma_zf.Application;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -29,6 +28,7 @@ public class ZfApplication extends Application {
 	private String tel;
 	private String email;
 	private String address;
+	private String type;
 
 	public String getUserId() {
 		return userId;
@@ -111,6 +111,14 @@ public class ZfApplication extends Application {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	@SuppressLint("NewApi")

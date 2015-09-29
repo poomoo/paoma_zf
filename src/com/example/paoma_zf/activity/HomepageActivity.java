@@ -59,9 +59,10 @@ public class HomepageActivity extends BaseActivity {
 					i.setClass(HomepageActivity.this, LoginActivity.class);
 					startActivity(i);
 				} else {
-					
+
 					Intent intent = new Intent();
-					intent.setClass(HomepageActivity.this, LookhomeActivity.class);
+					intent.setClass(HomepageActivity.this,
+							LookhomeActivity.class);
 					startActivity(intent);
 					// AlertDialog.Builder builder = new Builder(
 					// HomepageActivity.this);
@@ -134,9 +135,9 @@ public class HomepageActivity extends BaseActivity {
 	}
 
 	public Boolean checktype() {
-		if (!Zfapp.getLevelId().toString().trim().equals("3")) {
+		if (!Zfapp.getType().toString().trim().equals("2")) {
 			AlertDialog.Builder builder = new Builder(HomepageActivity.this);
-			builder.setMessage("请先登录/或您不是家长");
+			builder.setMessage("请先登录/或您不是管家");
 			builder.setTitle("提示");
 			builder.setPositiveButton("确认", new Dialog.OnClickListener() {
 

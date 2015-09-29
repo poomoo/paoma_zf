@@ -16,7 +16,7 @@
     </uses-permission>
 
     <application
-        android:name="com.example.paoma_zf.Application.ZfApplication"
+        android:name=".Application.ZfApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"

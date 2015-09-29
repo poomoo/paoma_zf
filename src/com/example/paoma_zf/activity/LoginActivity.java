@@ -214,6 +214,8 @@ public class LoginActivity extends BaseActivity {
 											.toString());
 									Zfapp.setAddress(UserList.get(0).get(
 											"address").toString());
+									Zfapp.setType(UserList.get(0).get(
+											"type").toString());
 								}
 								message.what = 1;
 								myHandler.sendMessage(message);

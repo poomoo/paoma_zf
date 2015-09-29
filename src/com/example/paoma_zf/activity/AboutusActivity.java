@@ -1,10 +1,13 @@
 package com.example.paoma_zf.activity;
 
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.widget.ViewFlipper;
 
 import com.example.paoma_zf.R;
 import com.example.paoma_zf.Application.ZfApplication;
 import com.example.paoma_zf.net.Zfnet;
+import com.example.paoma_zf.view.MyGestureListener;
 
 public class AboutusActivity extends BaseActivity {
 
@@ -31,5 +34,7 @@ public class AboutusActivity extends BaseActivity {
 			}
 		}).start();
 	}
-
+	ViewFlipper viewFlipper__information_img;
+	final GestureDetector gd = new GestureDetector(new MyGestureListener(
+			this, viewFlipper__information_img));
 }
